@@ -37,9 +37,10 @@ jobs:
       - name: Install Playwright Browsers
         run: pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps 
         shell: pwsh
-
+      
       - name: Run Playwright + Reqnroll Tests
-        run: dotnet test --filter "TestCategory=E2E"
+        run: $env:HEADED="0" |
+             dotnet test --filter "Category=E2E" 
 
       - name: Upload Extent Report
         uses: actions/upload-artifact@v4
