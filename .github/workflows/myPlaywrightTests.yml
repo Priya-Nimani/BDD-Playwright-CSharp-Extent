@@ -47,6 +47,6 @@ jobs:
         if: always()
         with:
           name: extent-report-${{ matrix.env }}
-          path: TestResults/ExtentReports/*.html
-                TestResults/trace/*.zip 
-                TestResults/videos/*.webm
+          path: ./TestResults/ExtentReports/*.html
+                ./TestResults/trace/*.zip 
+                ./TestResults/videos/*.webm
