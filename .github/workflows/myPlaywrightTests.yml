@@ -2,9 +2,9 @@ name: Playwright Reqnroll Tests (ExtentReports Multi-Env)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "msater" ]
   workflow_dispatch:
 
 jobs:
