@@ -29,24 +29,15 @@ jobs:
           dotnet-version: '10.0'
 
       - name: Restore dependencies
-<<<<<<< HEAD
-        run: dotnet restore
-        
-=======
         run: dotnet add package Microsoft.Playwright.NUnit
 
->>>>>>> 0c50a9a4327cca42a2e57688de10abc249f50256
       - name: Build
         run: dotnet build 
 
       - name: Install Playwright Browsers
         run: pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps
         shell: pwsh
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> 0c50a9a4327cca42a2e57688de10abc249f50256
       - name: Run Playwright + Reqnroll Tests
         run: $env:HEADED="0" |
              dotnet test --filter "Category=E2E" 
@@ -57,3 +48,5 @@ jobs:
         with:
           name: extent-report-${{ matrix.env }}
           path: TestReports/ExtentReport_*.html
+                TestResults/trace/*.zip 
+                TestResults/videos/*.webm
