@@ -681,3 +681,4 @@ C:\Users\priya\projects\PriyaNewProject\bin\Debug\net10.0\Reqnroll.dll
 C:\Users\priya\projects\PriyaNewProject\bin\Debug\net10.0\Reqnroll.NUnit.ReqnrollPlugin.dll
 C:\Users\priya\projects\PriyaNewProject\obj\Debug\net10.0\PriyaNewProject.ProcessFeatureFileInputs.cache
 C:\Users\priya\projects\PriyaNewProject\obj\Debug\net10.0\NUnit.AssemblyHooks.PriyaNewProject.cs
+C:\Users\priya\projects\PriyaNewProject\obj\Debug\net10.0\PriyaNewProject.sourcelink.json
