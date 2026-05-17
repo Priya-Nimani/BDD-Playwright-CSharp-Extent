@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        env: [dev, staging, production]
+        env: [staging]
 
     env:
       TEST_ENV: ${{ matrix.env }}
@@ -29,15 +29,24 @@ jobs:
           dotnet-version: '10.0'
 
       - name: Restore dependencies
+<<<<<<< HEAD
         run: dotnet restore
         
+=======
+        run: dotnet add package Microsoft.Playwright.NUnit
+
+>>>>>>> 0c50a9a4327cca42a2e57688de10abc249f50256
       - name: Build
         run: dotnet build 
 
       - name: Install Playwright Browsers
         run: pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps
         shell: pwsh
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 0c50a9a4327cca42a2e57688de10abc249f50256
       - name: Run Playwright + Reqnroll Tests
         run: $env:HEADED="0" |
              dotnet test --filter "Category=E2E" 
@@ -47,4 +56,4 @@ jobs:
         if: always()
         with:
           name: extent-report-${{ matrix.env }}
-          path: TestResults/ExtentReports/*.html
+          path: TestReports/ExtentReport_*.html
