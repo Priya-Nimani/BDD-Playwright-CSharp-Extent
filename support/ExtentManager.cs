@@ -18,7 +18,10 @@ namespace PriyaNewProject.Support
                 {
                     if (_extent == null)
                     {
-                        var reportsDir = Path.Combine(Directory.GetCurrentDirectory(), "TestReports");
+                        // Navigate from bin/Debug/netX.X to project root
+                        string baseDir = AppContext.BaseDirectory; // bin/Debug/netX.Y/...
+                        string projectRoot = Path.GetFullPath(Path.Combine(baseDir, "..", "..", "..")); 
+                        string reportsDir = Path.Combine(projectRoot, "TestResults", "ExtentReports");
                         Directory.CreateDirectory(reportsDir);
                         string env = Environment.GetEnvironmentVariable("TEST_ENV") ?? "dev";
                         var reportPath = Path.Combine(reportsDir, $"ExtentReport_{env}_{DateTime.Now:yyyyMMdd_HHmmss}.html");

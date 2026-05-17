@@ -38,7 +38,10 @@ namespace PriyaNewProject.Support
                     Headless = _settings.Headless
                 });
                 _context.ExtentTest.Info($"Starting scenario on browser: {_context.Browser.BrowserType.Name}");
-                var videosDir = Path.Combine(Directory.GetCurrentDirectory(), "TestResults/videos");
+                // Navigate from bin/Debug/netX.X to project root
+                string baseDir = AppContext.BaseDirectory; // bin/Debug/netX.Y/...
+                string projectRoot = Path.GetFullPath(Path.Combine(baseDir, "..", "..", "..")); ;
+                var videosDir = Path.Combine(projectRoot, "TestResults", "videos");
                 Directory.CreateDirectory(videosDir);
 
                 _context.BrowserContext = await _context.Browser.NewContextAsync(new BrowserNewContextOptions
@@ -80,7 +83,10 @@ namespace PriyaNewProject.Support
                 {
                     try
                     {
-                        var tracesDir = Path.Combine(Directory.GetCurrentDirectory(), "TestResults", "traces");
+                        // Navigate from bin/Debug/netX.X to project root
+                        string baseDir = AppContext.BaseDirectory; // bin/Debug/netX.Y/...
+                        string projectRoot = Path.GetFullPath(Path.Combine(baseDir, "..", "..", ".."));                         
+                        var tracesDir = Path.Combine(projectRoot, "TestResults", "traces");
                         Directory.CreateDirectory(tracesDir);
 
                         traceFile = Path.Combine(tracesDir, $"{_context.ScenarioName}_{DateTime.Now:yyyyMMdd_HHmmss}.zip");

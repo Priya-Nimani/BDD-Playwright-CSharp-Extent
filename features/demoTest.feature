@@ -6,5 +6,5 @@ Background:
 
 @regression
 Scenario Outline:  Test various links on home page    
-	Then homepage title is "Playwright"
+	Then homepage title is "Playwright111"
 	
