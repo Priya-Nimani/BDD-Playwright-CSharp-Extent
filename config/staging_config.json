@@ -1,0 +1,6 @@
+{
+  "Browser": "firefox",
+  "Headless": true,
+  "BaseUrl": "https://playwright.dev",
+  "SlowMo": 200
+}
