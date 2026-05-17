@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj": {}
+    "c:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj": {
+    "c:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj",
+        "projectUniqueName": "c:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj",
         "projectName": "PriyaNewProject",
-        "projectPath": "C:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj",
+        "projectPath": "c:\\Users\\priya\\projects\\PriyaNewProject\\PriyaNewProject.csproj",
         "packagesPath": "C:\\Users\\priya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\priya\\projects\\PriyaNewProject\\obj\\",
+        "outputPath": "c:\\Users\\priya\\projects\\PriyaNewProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\priya\\AppData\\Roaming\\NuGet\\NuGet.Config"
