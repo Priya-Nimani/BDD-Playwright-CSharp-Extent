@@ -1,4 +1,4 @@
-name: Playwright Reqnroll Tests (ExtentReports Multi-Env)
+name: Playwright Reqnroll Tests (ExtentReports with Multi-Env)
 
 on:
   push:
