@@ -43,10 +43,9 @@ jobs:
              dotnet test --filter "Category=E2E" 
 
       - name: Upload Extent Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: extent-report-${{ matrix.env }}
           path: TestResults/ExtentReports/** 
-                # - **/bin/Debug/net10.0/TestResults/traces/**
-                # - **/bin/Debug/net10.0/TestResults/videos/**
+          archive: false
