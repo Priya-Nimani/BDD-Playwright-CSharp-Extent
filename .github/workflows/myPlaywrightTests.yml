@@ -48,5 +48,5 @@ jobs:
         with:
           name: extent-report-${{ matrix.env }}
           path: ./TestResults/ExtentReports/*.html
-                ./TestResults/trace/*.zip 
+                ./TestResults/traces/*.zip 
                 ./TestResults/videos/*.webm
