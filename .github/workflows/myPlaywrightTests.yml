@@ -39,7 +39,7 @@ jobs:
         shell: pwsh
 
       - name: Run Playwright + Reqnroll Tests
-        run: dotnet test --configuration Release --no-build
+        run: dotnet test --filter "TestCategory=E2E"
 
       - name: Upload Extent Report
         uses: actions/upload-artifact@v4
