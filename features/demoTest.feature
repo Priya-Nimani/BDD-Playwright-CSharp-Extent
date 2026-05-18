@@ -1,10 +1,8 @@
 @E2E
 Feature: FirstFeatureFile
 
-Background: 
-    Given Playwright home page is loaded
-
 @regression
-Scenario Outline:  Test various links on home page    
+Scenario:  Test various links on home page   
+    Given Playwright home page is loaded
 	Then homepage title is "Playwright111"
 	

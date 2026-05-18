@@ -16,5 +16,10 @@ namespace PriyaNewProject.PageObjects
         {
             Assert.That(await _page.TitleAsync(), Does.Contain(expectedTitle));
         }
+
+        public async Task ClickGetStarted()
+        {
+            await _page.GetByRole(AriaRole.Link, new() { Name = "Get started" }).ClickAsync();
+        }
     }
 }

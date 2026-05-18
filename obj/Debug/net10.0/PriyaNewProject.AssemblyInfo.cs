@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PriyaNewProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09d959378b401399665d14d88173a495cc737079")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c874d7247ac9eaa487d36c2b43912762c8217b66")]
 [assembly: System.Reflection.AssemblyProductAttribute("PriyaNewProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PriyaNewProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

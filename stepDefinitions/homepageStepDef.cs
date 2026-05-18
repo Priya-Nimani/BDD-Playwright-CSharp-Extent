@@ -28,6 +28,12 @@ namespace PriyaNewProject.StepDefinitions
         {
             await _homePage.CheckTitleContains(expectedTitle);
         }
+
+        [When(@"I click on Get Started link")]
+        public async Task WhenIClickOnGetStartedLink()
+        {
+            await _homePage.ClickGetStarted();
+        }
     }
 }
 

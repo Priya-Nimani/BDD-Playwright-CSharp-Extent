@@ -18,20 +18,18 @@ namespace PriyaNewProject.Features
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "3.0.0.0")]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::NUnit.Framework.TestFixtureAttribute()]
-    [global::NUnit.Framework.DescriptionAttribute("FirstFeatureFile")]
+    [global::NUnit.Framework.DescriptionAttribute("This is second feature file")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
-    [global::NUnit.Framework.CategoryAttribute("E2E")]
-    public partial class FirstFeatureFileFeature
+    public partial class ThisIsSecondFeatureFileFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = new string[] {
-                "E2E"};
+        private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "features", "FirstFeatureFile", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "features", "This is second feature file", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
-#line 1 "demoTest.feature"
+#line 1 "secondTest.feature"
 #line hidden
         
         [global::NUnit.Framework.OneTimeSetUpAttribute()]
@@ -105,24 +103,33 @@ namespace PriyaNewProject.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
+        public virtual async global::System.Threading.Tasks.Task FeatureBackgroundAsync()
+        {
+#line 3
+#line hidden
+#line 4
+    await testRunner.GivenAsync("Playwright home page is loaded", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+        }
+        
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("features/demoTest.feature.ndjson", 3);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("features/secondTest.feature.ndjson", 3);
         }
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Test various links on home page")]
-        [global::NUnit.Framework.CategoryAttribute("regression")]
+        [global::NUnit.Framework.CategoryAttribute("E2E")]
         public async global::System.Threading.Tasks.Task TestVariousLinksOnHomePage()
         {
             string[] tagsOfScenario = new string[] {
-                    "regression"};
+                    "E2E"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Test various links on home page", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 5
+#line 7
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -132,11 +139,11 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 6
-    await testRunner.GivenAsync("Playwright home page is loaded", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 3
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 7
- await testRunner.ThenAsync("homepage title is \"Playwright111\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line 8
+ await testRunner.ThenAsync("homepage title is \"Playwright\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
